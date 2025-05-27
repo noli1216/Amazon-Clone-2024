@@ -1,0 +1,139 @@
+.container img {
+     width: 100px !important;}
+ .container{
+     display:flex ;
+     justify-content: center;
+     gap: 10px;
+     margin-top: 20px;
+}
+.cart__product{
+  display: flex;
+  gap: 10px;
+}
+.btn__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn{
+  padding: 5px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+.btn:hover svg{
+  background-color: var(--primary-color);
+}
+
+.container div:not(.subtotal) {
+  height: auto !important;
+}
+
+.cart__container{
+     padding: 20px;
+}
+.cart__container h2,
+.cart__container h3{
+     padding: 10px;
+}
+.cart__container hr{
+     margin: 10px;
+
+}
+
+.subtotal{
+     padding: 20px;
+     min-width: 300px;
+     height: 80px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+     
+     border: 1px solid rgb(193,193,193);
+     background-color: rgb(242,241,241);
+     border-radius: 5px;
+}
+
+.subtotal a{
+     text-align: center;
+     width: 100%;
+     border: none;
+     background-color: var(--primary-color);
+     border-radius: 5px;
+     padding: 5px 10px;
+     text-decoration: none;
+     color: black;
+}
+.subtotal a:hover{
+     background-color: var(--primary-shade);
+}
+
+.subtotal > div,
+.subtotal span{
+     display: flex;
+     gap:20px;
+}
+/* @media screen and (max-width:968px){
+     .container{
+          flex-direction: column;
+          order: 1;
+     }
+}  */
+/* ========== Responsive Media Queries ========== */
+
+/* Tablet screens (<= 968px) */
+@media screen and (max-width: 968px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart__container,
+  .subtotal {
+    width: 100%;
+  }
+
+  .subtotal {
+    position: static;
+  }
+}
+
+/* Small screens (<= 576px) */
+@media screen and (max-width: 576px) {
+  .btn {
+    padding: 5px 12px;
+  }
+
+  .cart__product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtotal {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .subtotal a {
+    padding: 6px 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

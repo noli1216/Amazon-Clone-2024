@@ -1,0 +1,36 @@
+.hero_img{
+     position: relative;
+}
+
+.hero_img::before{
+     content:"";
+     position: absolute;
+     bottom: 0px;
+     width: 100%;
+     height: 300px;
+     background-image: linear-gradient(to bottom, rgba(225,225,225,0), rgba(255,255,255));
+}
+
+
+/*  */
+
+
+@media screen and (max-width: 576px) {
+     .hero_img::before {
+       height: 30%; /* slightly taller on small screens */
+     }
+   }
+   
+   /* Tablet */
+   @media screen and (min-width: 577px) and (max-width: 992px) {
+     .hero_img::before {
+       height: 25%;
+     }
+   }
+   
+   /* Large desktop */
+   @media screen and (min-width: 1200px) {
+     .hero_img::before {
+       height: 15%;
+     }
+   }
