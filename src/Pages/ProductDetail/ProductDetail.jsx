@@ -35,8 +35,7 @@ function ProductDetail() {
         <ProductCard
          product={product}
           flex={true}
-           renderDesc={true}
-            renderAdd={true} />
+           renderDesc={true} renderAdd={true} />
       )}
     </LayOut>
   );

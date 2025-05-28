@@ -1,22 +1,13 @@
+import React from "react";
 import Routing from "./Router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter basename="/Amazon-Clone-2024">
       <Routing />
-    </div>
+    </BrowserRouter>
   );
 }
-
 export default App;
 
-// import viteLogo from '/vite.svg'
-// import Header from './components/Header/Header'
-// import './App.css'
-// import Carousel  from './components/Carousel/Carousel'
-// import Category from './components/Category/Category'
-// import Product from './components/Product/Product'
-/* <Header/>
-      <Carousel/>
-      <Category/>
-      <Product/> */

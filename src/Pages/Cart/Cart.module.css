@@ -78,13 +78,6 @@
      display: flex;
      gap:20px;
 }
-/* @media screen and (max-width:968px){
-     .container{
-          flex-direction: column;
-          order: 1;
-     }
-}  */
-/* ========== Responsive Media Queries ========== */
 
 /* Tablet screens (<= 968px) */
 @media screen and (max-width: 968px) {

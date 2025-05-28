@@ -1,5 +1,4 @@
 import React from 'react'
-// import { IoMdMenu } from "react-icons/io";
 import { AiOutlineMenu } from "react-icons/ai";
 import classes from "./Header.module.css";
 

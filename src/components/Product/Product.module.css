@@ -1,6 +1,6 @@
 .card__container {
      width: 250px;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* ✅ fixed */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* fixed */
      padding: 10px;
      color: black;
      text-decoration: none;
@@ -85,14 +85,6 @@
      height: auto;
    }
 
-   /* @media screen and (max-width: 768px){
-     .product__flexed{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-     }
-   } */
-
    /* Responsive Media Queries */
 
 @media screen and (max-width: 992px) {
@@ -125,4 +117,12 @@
     margin: 50px auto;
     gap: 20px;
   }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .card__container{
+    grid-template-columns: repeat(4, 1fr);
+   
+  }
+  
 }

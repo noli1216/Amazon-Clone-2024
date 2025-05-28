@@ -14,7 +14,7 @@ function Results() {
   const { categoryName } = useParams();
 
   useEffect(() => {
-    setIsloading(true); // ✅ set loading before fetching
+    setIsloading(true); // set loading before fetching
     axios
       .get(`${productUrl}/products/category/${categoryName}`)
       .then((res) => {
@@ -24,7 +24,7 @@ function Results() {
       })
       .catch((err) => {
         console.log(err);
-        setIsloading(false); // ✅ fix incorrect function call
+        setIsloading(false); // fix incorrect function call
       });
   }, [categoryName]);
 
@@ -35,7 +35,7 @@ function Results() {
         <p style={{ padding: "30px" }}>Category / {categoryName}</p>
         <hr />
         {isLoading ? (
-          <Loader/> // ✅ or replace with your custom loader component
+          <Loader/> // or replace with your custom loader component
         ) : (
           <div className={classes.products__container}>
             {results.map((product) => (
