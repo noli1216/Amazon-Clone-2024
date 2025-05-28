@@ -11,30 +11,26 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
 function Cart() {
-     const[{basket, user}, dispatch]=useContext(DataContext);
-     const total = basket.reduce(
-       (amount, item) => amount + item.price * item.amount,
-       0 
-     );
-console.log(basket);
+  const [{ basket, user }, dispatch] = useContext(DataContext);
+  const total = basket.reduce(
+    (amount, item) => amount + item.price * item.amount,
+    0
+  );
+  console.log(basket);
 
-const increment = (item) => {
-  dispatch({
-    type: Type.ADD_TO_BASKET,
-    item: item, // ✅ pass the item properly
-  });
-};
+  const increment = (item) => {
+    dispatch({
+      type: Type.ADD_TO_BASKET,
+      item: item, // pass the item properly
+    });
+  };
 
-
-const decrement = (id) => {
-  dispatch({
-    type: Type.REMOVE_FROM_BASKET,
-    id: id, // pass the id explicitly
-  });
-};
-
-
-
+  const decrement = (id) => {
+    dispatch({
+      type: Type.REMOVE_FROM_BASKET,
+      id: id, // pass the id explicitly
+    });
+  };
 
   return (
     <LayOut>
