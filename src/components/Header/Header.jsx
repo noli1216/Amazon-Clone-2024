@@ -9,16 +9,15 @@ import Image from "../../assets/imags/image.png";
 import LowerHeader from "./LowerHeader";
 import { useContext } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 function Header() {
+  const [{ user, basket }, dispatch] = useContext(DataContext); // ✅ this now works
+  console.log(basket.length);
 
-     const [{ basket }, dispatch] = useContext(DataContext); // ✅ this now works
-     console.log(basket.length);
-
-     const totaItem = basket?.reduce((amount,item)=>{
-      return item.amount + amount
-     },0)
-
+  const totaItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
 
   return (
     <section className={classes.fixed}>
@@ -48,7 +47,7 @@ function Header() {
             <option value="all">All</option>
           </select>
           <input type="text" placeholder="Search Amazon" />
-          <BsSearch size={20} />
+          <BsSearch size={38} />
         </div>
 
         {/* Right Section */}
@@ -60,10 +59,20 @@ function Header() {
             </select>
           </Link>
 
-          <Link to="/signup">
+          <Link to={!user && "/auth"}>
             <div className={classes.signin}>
-              <p>Sign In</p>
-              <span>Account & Lists</span>
+              {user ? (
+                <>
+                  <p>Hello {user?.email?.split("@")[0]} </p>
+
+                  <span  onClick={()=>auth.signOut()}>Sign Out</span>
+                </>
+              ) : (
+                <>
+                  <p>Hello ,Sign In</p>
+                  <span>Account & Lists</span>
+                </>
+              )}
             </div>
           </Link>
 

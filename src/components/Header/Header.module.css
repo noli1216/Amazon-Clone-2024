@@ -126,6 +126,11 @@
   line-height: 1.2;
 }
 
+.signin span{
+  display: flex;
+
+}
+
 .cart {
   position: relative;
 }

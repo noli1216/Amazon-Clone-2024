@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../node_modules"
+		},
+		{
+			"path": "../public"
+		},
+		{
+			"path": "../src"
+		},
+		{
+			"path": "../dist"
+		},
+		{
+			"path": "../amazon-api"
+		}
+	]
+}
