@@ -11,12 +11,6 @@
 		},
 		{
 			"path": "../src"
-		},
-		{
-			"path": "../dist"
-		},
-		{
-			"path": "../amazon-api"
 		}
 	]
 }
