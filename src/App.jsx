@@ -29,9 +29,12 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/Amazon-Clone-2024">
+    <BrowserRouter >
       <Routing />
     </BrowserRouter>
   );
 }
 export default App;
+
+
+//basename="/Amazon-Clone-2024"
