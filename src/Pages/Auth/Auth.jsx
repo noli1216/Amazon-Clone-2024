@@ -121,8 +121,8 @@ function Auth() {
             onClick={authHandler}
             className={classes.login__signInButton}
           >
-            {loading.signIn ? <ClipLoader color="#000" size={15} /> : "sign In"}
-            Sign In
+            {loading.signIn ? <ClipLoader color="#000" size={15} /> : "Sign In"}
+          
           </button>
         </form>
         <p>
