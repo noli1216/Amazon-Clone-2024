@@ -133,6 +133,8 @@
 
 .cart {
   position: relative;
+    margin-right: 10px;
+
 }
 .cart span {
   position: absolute;
